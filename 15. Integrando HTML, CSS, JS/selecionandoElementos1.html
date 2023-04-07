@@ -10,7 +10,20 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        // SELECIONANDO POR ID
+        document.getElementById('primeiro').classList.add('destaque')
+
+        // SELECIONANDO PELO NOME DA TAG
+        const divs = document.getElementsByTagName('div')
+        
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+        
+        //SELECIONANDO POR UMA CLASSE 
+        const ultimosElementos = [...document.getElementsByClassName('ultimo')]
+        ultimosElementos.forEach(e => e.classList.remove('destaque'))
+
+
     </script>
 </body>
 </html>
