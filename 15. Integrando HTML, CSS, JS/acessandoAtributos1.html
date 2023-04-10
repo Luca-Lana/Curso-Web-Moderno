@@ -15,7 +15,15 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        const img = document.querySelector('img')
+        // FORMAS DE ACESSAR ATRIBUTOS DAS TAGS
+        console.log('getAttribute',img.getAttribute('src'))
+        console.log(img.src)
+        console.log(img['src'])
+        
+        console.log('getAttribute', img.getAttribute('alt'))
+        console.log(img.alt)
+        console.log(img['alt'])
     </script>
 </body>
 
