@@ -22,7 +22,14 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('div ul')
+        console.log(lista.parentNode)  // PEGANDO TAG PAI DO ELEMENTO
+        console.log(lista.childNodes) // LISTA DE FILHOS 
+        console.log(lista.firstChild) // PRIMEIRO ELEMENTO
+        console.log(lista.firstChild.nextSibling) // IRMAO DO PRIMEIRO ELEMENTO
+        console.log(lista.lastChild) // ULTIMO ELEMENT
+        console.log(lista.lastChild.previousSibling) // IRMAO ANTERIOR A ESSE ELEMENTO
+        console.log(lista.children) // VAI PEGAR TODOS OS ELEMENTOS FILHO SEM OS ESPAÇOS
     </script>
 </body>
 
