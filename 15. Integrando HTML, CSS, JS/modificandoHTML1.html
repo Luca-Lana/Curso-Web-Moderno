@@ -9,7 +9,36 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const criarTag = (tag, conteudo, atributos) => {
+            const elemento = document.createElement(tag) // CRIA A TAG PASSADA
+            if (conteudo) {
+                elemento.innerHTML =  conteudo // ADD CONTEUDO DENTRO DELA
+            }
+            for(attr in atributos) {
+                elemento.setAttribute(attr, atributos[attr]) // ADD TODOS OS ATRIBUTOS PASSADOS
+            }
+            return elemento
+        }
+
+        const div1 = criarTag('div','Primeiro', {class: 'destaque'})
+        const div2 = criarTag('div','Segundo', {'wm-atributo': 'valor'})
+        const p1 = criarTag('p','Terceiro')
+        const div3 = criarTag('div')
+        div3.appendChild(p1) // inserir elemento na div
+
+        // DANDO APPEND DAS DIVS NO BODY
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+        
+        // CRIAR UM CLONE
+        const div4 = div3.cloneNode(true) // ESSE PARAMETRO VAI DECIDIR SE VAI CLONAR OS FILHOS OU NÃO
+        body.appendChild(div4) 
+        
+        body.removeChild(div3) // É possivel tambem remover o filho
+
     </script>
 </body>
 
