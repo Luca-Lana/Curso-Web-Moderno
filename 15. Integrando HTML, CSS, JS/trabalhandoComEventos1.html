@@ -12,6 +12,14 @@
         <a href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+        const navegar5seg = (e) => {
+            e.preventDefault()
+            console.log('Clicado');
+            setTimeout(() => {
+                window.location.href = e.target.href
+            }, 5000)
+        }
+        document.querySelector('a').addEventListener('click', navegar5seg) // ADD O EVENTO DE CLICK AO LINK
+
     </script>
 </body>
