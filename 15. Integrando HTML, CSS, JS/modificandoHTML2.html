@@ -12,7 +12,9 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado' // substitui tudo que está dentro da div pelo valor passado
+        div.outerHTML = 'Texto Alterado' // VAI REMOVER A TAG SELECIONADO E TUDO DENTRO DELA PELO VALOR PASSADO
     </script>
 </body>
 
