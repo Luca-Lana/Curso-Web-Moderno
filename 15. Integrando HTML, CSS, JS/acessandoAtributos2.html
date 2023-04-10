@@ -17,8 +17,18 @@
         </ul>
     </div>
     <script>
-        // ...
-    </script>
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log(lista.childNodes) // PEGAR OS FILHOS 
+        console.log(lista.id) // ACESSAR PROPRIEDADE ID
+        console.log(lista.getAttribute('id')) // ACESSAR PROPRIEDADE ID
+        console.log(lista.getAttribute('destino')) // ACESSAR PROPRIEDADE DESTINO
+        // PROPRIEDADES PERSONALIZADAS NÃO PODE SER ACESSADA POR NOTAÇÃO PONTO
+        console.log(lista.hasAttribute('destino')); // VERIFICANDO SE TEM O ATRIBUTO
+        lista.setAttribute('destino', 'empresa') // SETAR O VALOR DE UM ATRIBUTO OU CRIAR UM ATRIBUTO COM UM VALOR
+        lista.setAttribute('status', 'aberto')
+        console.log(lista.getAttribute('destino'))
+        lista.removeAttribute('destino') // removendo atributo
+     </script>
 </body>
 
 </html>
