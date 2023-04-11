@@ -6,3 +6,4 @@ Durante o curso vão ser desenvolvidos vários projetos e por essa motivo vou cr
 # Projetos 🚀
 
 * [API com Express](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/10.%20Node/projeto)
+* [Flappy Bird](https://github.com/Luca-Lana/Curso-Web-Moderno/blob/main/15.%20Integrando%20HTML%2C%20CSS%2C%20JS/index.html)
