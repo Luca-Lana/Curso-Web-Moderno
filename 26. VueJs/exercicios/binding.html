@@ -7,9 +7,22 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+    <div id="app">
+        <p>{{ link }}</p>
+        <!-- JEITO ERRADO DE FAZEER -->
+        <a href="{{link}}">Canal</a>
+         <!--JEITO CERTO DE FAZER  -->
+         <a v-bind:href="link">Google</a>
+         <!-- FORMA REDUZIDA DE FAZER -->
+         <a :href="link">Google</a>
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                link: 'https://www.google.com/'
+            }
+        })
     </script>
 </body>
 </html>
