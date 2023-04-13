@@ -12,9 +12,22 @@
     </style>
 </head>
 <body class="exercicio">
-
+    <!-- FORMA DE APLICAR CLASSE ATRAVES DE UM EVENTO -->
+    <div id="app" @click="alterarCor" :class="{'vermelho': aplicarCor}">
+        teste
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                aplicarCor: false
+            },
+            methods: {
+                alterarCor() {
+                    this.aplicarCor = !this.aplicarCor
+                }
+            }
+        })
     </script>
 </body>
 </html>
