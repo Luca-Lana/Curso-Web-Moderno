@@ -8,11 +8,37 @@
 </head>
 <body class="exercicio">
     <div id="app">
-
+        <p>Quanto tempo??</p>
+        <p>
+            <!-- FORMA DE APLICAR UMA FUNÇÃO A UM EVENTO -->
+            <button v-on:click="remove">-</button>
+            <input type="text" v-model="contador">
+            <!-- OUTRA FORMA DE APLICAR UMA FUNÇÃO A UM EVENTO -->
+            <button @click="add">+</button>
+        </p>
+        <p>{{contador}}</p>
     </div>
     <script>
         new Vue({
-
+            el: '#app',
+            data: {
+                contador: 0
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                remove() {
+                    this.contador--
+                }
+            },
+            watch: {
+                contador() {
+                    if (this.contador < 0 || isNaN(this.contador)) {
+                        this.contador = 0
+                    }
+                }
+            }
         })
     </script>
 </body>
