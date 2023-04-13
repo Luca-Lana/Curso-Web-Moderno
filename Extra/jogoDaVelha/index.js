@@ -15,19 +15,17 @@ let positions = [
 ]
 
 function newMove(e) {
-    jogadas++
+    ++jogadas
     e.target.innerHTML = player
-    e.target.removeEventListener('click', newMove)
-    
-    currentPlayer.innerHTML = `JOGADOR DA VEZ ${player}`
     player = player === 'X' ? 'O' : 'X'
-
+    currentPlayer.innerHTML = `JOGADOR DA VEZ ${player}`
+    e.target.removeEventListener('click', newMove)
     setTimeout(() => {
         positions.forEach(position => {
-            let valor1 = document.querySelector(`[data-i="${position[0]}"]`).innerHTML
-            let valor2 = document.querySelector(`[data-i="${position[1]}"]`).innerHTML 
-            let valor3 = document.querySelector(`[data-i="${position[2]}"]`).innerHTML 
-            if (valor1 == valor2 && valor2 === valor3 && valor1 === valor3 && valor1 !== '' && valor2 !== '' && valor3 !== '') {
+            let valor1 = document.querySelector(`[data-i="${position[0]}"]`).innerHTML || true
+            let valor2 = document.querySelector(`[data-i="${position[1]}"]`).innerHTML || false
+            let valor3 = document.querySelector(`[data-i="${position[2]}"]`).innerHTML || true
+            if (valor1 == valor2 && valor2 === valor3 && valor1 === valor3) {
                 alert(`JOGADOR "${valor1}" GANHOU O JOGO`)
                 init()
             }
