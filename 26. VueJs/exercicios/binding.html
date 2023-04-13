@@ -10,16 +10,28 @@
     <div id="app">
         <p>{{ link }}</p>
         <!-- JEITO ERRADO DE FAZEER -->
-        <a href="{{link}}">Canal</a>
+        <p>
+            <a href="{{link}}">Canal</a>
+        </p>
          <!--JEITO CERTO DE FAZER  -->
-         <a v-bind:href="link">Google</a>
+         <p>
+             <a v-bind:href="link">Google</a>
+         </p>
          <!-- FORMA REDUZIDA DE FAZER -->
-         <a :href="link">Google</a>
+         <p>
+             <a :href="link">Google</a>
+         </p>
+         <!-- ATUALIZAÇÃO EM DUAS DIREÇÕES -->
+         <p>
+            <input type="text" v-model="nome">
+            <p>{{ nome }}</p>
+         </p>
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
+                nome: '',
                 link: 'https://www.google.com/'
             }
         })
