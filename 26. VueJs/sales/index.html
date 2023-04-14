@@ -9,9 +9,56 @@
 </head>
 
 <body>
-
+    <div id="app">
+        <div class="container">
+            <h1 class="mt-3">{{ titulo }}</h1>
+            <table class="mt-5 table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>PREÇO</th>
+                        <th>QUANTIDADE</th>
+                        <th>DATA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="venda in vendas">
+                        <td>{{ venda.id }}</td>
+                        <td>{{ venda.name }}</td>
+                        <td>{{ venda.price }}</td>
+                        <td>{{ venda.qtde }}</td>
+                        <td>{{ venda.date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Relatório de Vendas',
+                vendas: null
+            },
+            methods: {
+                getSales() {
+                    fetch('/data/sales.json')
+                    .then(r => r.json())
+                    .then(data => this.vendas = data)
+                    .then(data => this.tratarVendas())
+                },
+                tratarVendas () {
+                    this.vendas.map(venda => {
+                        venda.price = `R$ ${parseFloat(venda.price).toFixed(2).replace('.', ',')}`
+                        return venda
+                    })
+                }
+            },
+            mounted() {
+                this.getSales()
+            }
+        })
     </script>
 </body>
 
