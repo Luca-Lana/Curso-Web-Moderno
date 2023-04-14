@@ -9,3 +9,4 @@ Durante o curso vão ser desenvolvidos vários projetos e por essa motivo vou cr
 * [Flappy Bird](https://github.com/Luca-Lana/Curso-Web-Moderno/blob/main/15.%20Integrando%20HTML%2C%20CSS%2C%20JS)
 * [Jogo da Velha](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/Extra/jogoDaVelha)
 * [Gerador de QrCode](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/26.%20VueJs/qrcode)
+* [Lista de Produtos](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/26.%20VueJs/sales)
