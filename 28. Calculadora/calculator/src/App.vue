@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <h1>Ola vue</h1>
+    <CalculatorItem/>
   </div>
 </template>
 
 <script>
-export default {
+import CalculatorItem from './main/CalculatorItem.vue'
 
+export default {
+    components: { CalculatorItem }
 }
 </script>
 
