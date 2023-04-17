@@ -1,7 +1,23 @@
 <template>
     <div class="calculator">
         <DisplayItem />
-        <ButtonItem />
+        <ButtonItem label="AC" triple/>
+        <ButtonItem label="/" operation/>
+        <ButtonItem label="7" />
+        <ButtonItem label="8" />
+        <ButtonItem label="9" />
+        <ButtonItem label="*" operation/>
+        <ButtonItem label="4" />
+        <ButtonItem label="5" />
+        <ButtonItem label="6" />
+        <ButtonItem label="-" operation/>
+        <ButtonItem label="1" operation/>
+        <ButtonItem label="2" operation/>
+        <ButtonItem label="3" operation/>
+        <ButtonItem label="+" operation/>
+        <ButtonItem label="0" double/>
+        <ButtonItem label="." />
+        <ButtonItem label="=" operation/>
     </div>
 </template>
 

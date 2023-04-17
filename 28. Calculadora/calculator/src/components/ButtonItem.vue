@@ -1,7 +1,7 @@
 <template>
   <button class="button"
   :class="{double, triple, operation}">
-  0
+  {{label}}
   </button>
 </template>
 

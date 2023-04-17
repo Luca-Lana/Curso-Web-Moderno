@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Ola vue</h1>
+    <h1>Calculadora</h1>
     <CalculatorItem/>
   </div>
 </template>
