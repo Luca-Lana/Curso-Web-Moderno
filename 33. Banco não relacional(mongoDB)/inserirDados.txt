@@ -1,0 +1,4 @@
+db.nome_collection.insert({nome: "Acre", sigla: "AC", regiao: "NORTE"}) -> vai inserir isso na coleção passada
+
+db.nome_collection.save({nome: "Alagos", sigla: "AL", regiao: "NORTE", populacao: 232323}) -> vai inserir na coleção passada
+
