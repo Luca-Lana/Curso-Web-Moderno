@@ -1,0 +1,9 @@
+show dbs -> mostra os bancos
+
+use [nome_banco] -> vau acessar um banco
+
+db.createCollection('noome_coleção') -> vai criar uma noome_coleção
+
+show collection -> vai mostrar todas as coleções criadas
+
+db.nome_collection.drop() -> vai remover a coleção passada
