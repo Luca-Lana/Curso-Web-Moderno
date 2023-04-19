@@ -1,0 +1,19 @@
+db.nome_collection.find() => vai retornar todos os estados
+
+db.nome_collection.find({"sigla": "RJ"}) => vai retornar todos os estados com essa sigla
+
+db.nome_collection.find().pretty() => vai retornar todos os estados com resultado formatado
+
+db.nome_collection.findOne() -> vai retornar o primeiro
+
+db.nome_collection.findOne({"sigla": "RJ"}) -> vai retornar o primeiro que tenha essa sigla
+
+PESQUISAR UM REGISTRO COM OPERADORES LOGICOS
+
+db.nome_collection.find($or: [{"sigla": "RJ"},{"sigla": "AC"}])
+
+PESQUISAR TODOS OS ESTADOS QUE TEM O ATRIBUTO POPULAÇÃO
+
+db.nome_collection.find({"populacao": {$exists: true}})
+
+APOS O

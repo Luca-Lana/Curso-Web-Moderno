@@ -10,3 +10,4 @@ Durante o curso vão ser desenvolvidos vários projetos e por essa motivo vou cr
 * [Jogo da Velha](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/Extra/jogoDaVelha)
 * [Gerador de QrCode](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/26.%20VueJs/qrcode)
 * [Lista de Produtos](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/26.%20VueJs/sales)
+* [Jogo da Velha](https://github.com/Luca-Lana/Curso-Web-Moderno/tree/main/Extra/jogoDaVelha)
