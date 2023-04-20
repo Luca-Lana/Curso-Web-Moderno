@@ -14,6 +14,8 @@ db.nome_collection.find($or: [{"sigla": "RJ"},{"sigla": "AC"}])
 
 PESQUISAR TODOS OS ESTADOS QUE TEM O ATRIBUTO POPULAÇÃO
 
-db.nome_collection.find({"populacao": {$exists: true}})
+db.nome_collection.find({"populacao": {$exists: true}}).skip(1).limit(2)
 
-APOS O
+db.nome_collection.count() -> vai contador quantos dados existem
+
+db.nome_collection().find({sigla: "SP"}, {nome: 1, sigla: 1}) -> dessa forma ele vai filtra pela sigla e mostrar apenas o nome e sigla
