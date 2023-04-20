@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express() 
 
-app.use((req, res) => {
-    res.send('Esta safe manito')
+app.get('/cliente/:id', (req, res) => {
+    return res.send(`Cliente número ${req.params.id}`)
 })
-
 
 app.listen(8080, () => {
     console.log('Servidor esta rodando')
